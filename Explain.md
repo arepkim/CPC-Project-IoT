@@ -23,7 +23,7 @@ Here is exactly what each person needs to do to "meet in the middle":
   Summary of Actions
    1. You: Set up the Flask app on the VM (I was about to do this in the code).
    2. Teammate: Adds an "HTTP POST" command to their Arduino code.
-   3. You: Point your React frontend to the VM's IP address.
+   3. You: Point your Flask frontend to the VM's IP address.
 
    -----------------------------------------------------------------------------------------------------------------------------------------------
    Here are the steps to set up the Google Cloud Platform (GCP) Compute Engine VM and the recommended specifications for your IoT project.
@@ -80,4 +80,5 @@ Here is exactly what each person needs to do to "meet in the middle":
    6
    7     # (Optional) Create a folder for your project
    8     mkdir cpc-project
+
    9     cd cpc-project
