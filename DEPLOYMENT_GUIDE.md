@@ -113,12 +113,37 @@ python3 app.py
 ### **2. Production Run (Background Service)**
 To keep the server running even after you close the SSH window, use `nohup` or `screen`.
 
+**Comparison: Which one to choose?**
+*   **Use `nohup`** if you want a simple "fire and forget" solution. It is standard and requires no extra installation.
+*   **Use `screen`** if you want to be able to "re-enter" the terminal session later to see live logs, debug, or restart the server manually. This is generally recommended for easier maintenance.
+
 **Method 1: Using Nohup (Quick)**
 ```bash
 # Run Gunicorn in the background
 nohup gunicorn --bind 0.0.0.0:5000 app:app > server.log 2>&1 &
 ```
 *   Your server is now live 24/7!
+
+**Method 2: Using Screen (Flexible)**
+1. Install screen:
+   ```bash
+   sudo apt install screen -y
+   ```
+2. Start a new screen session named 'smartbin':
+   ```bash
+   screen -S smartbin
+   ```
+3. Run the server inside this session:
+   ```bash
+   gunicorn --bind 0.0.0.0:5000 app:app
+   ```
+4. **Detach** (exit while keeping it running):
+   *   Press `Ctrl + A`, release keys, then press `D`.
+   *   You are now back in your main terminal, but the server is running in the background.
+5. **Reattach** (to view logs or stop server):
+   ```bash
+   screen -r smartbin
+   ```
 
 ---
 
