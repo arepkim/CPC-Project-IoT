@@ -11,7 +11,7 @@ This guide details the steps to deploy the **Smart Bin Flask Backend** to a **Go
 2. Navigate to **Compute Engine** > **VM instances**.
 3. Click **Create Instance**.
 4. **Name:** `smart-bin-server` (or your choice).
-5. **Region:** Choose one close to you (e.g., `asia-southeast1` for Singapore).
+5. **Region:** Choose one close to you.
 6. **Machine Type:** `e2-micro` (Eligible for free tier) or `e2-medium`.
 7. **Boot Disk:** Ubuntu 20.04 LTS or 22.04 LTS (Recommended over Debian for this guide).
 8. **Firewall:** Check both boxes:
@@ -107,7 +107,7 @@ Run this command to check if everything works:
 python3 app.py
 ```
 *   You should see: `Running on http://0.0.0.0:5000`.
-*   **Test it:** Open your computer's browser and go to `http://34.172.131.196:5000`.
+*   **Test it:** Open your computer's browser and go to http://<EXTERNAL IP>:5000, e.g.`http://34.172.131.196:5000`.
 *   Press **Ctrl + C** in the SSH window to stop the server.
 
 ### **2. Production Run (Background Service)**
