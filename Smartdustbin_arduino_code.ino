@@ -15,7 +15,7 @@ const char* password = "tenagamuda";
 
 // --- GCP VM SETTINGS ---
 // IMPORTANT: Replace this with your VM Public IP Address
-const char* serverUrl = "http://34.172.131.196:5000/api/update-sensor";
+const char* serverUrl = "http://x.x.x.x:5000/api/update-sensor";
 
 // --- PIN DEFINITIONS ---
 #define PIN_SERVO   47
